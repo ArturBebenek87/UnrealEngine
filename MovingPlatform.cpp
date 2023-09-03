@@ -15,29 +15,18 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
+	
+	MyInt = 9;
 
+	APlusB = InputA + InputB;
+
+	FloatAPlusFloatB = InputFloatA + InputFloatB;
 }
 
 // Called every frame
 void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	FVector LocalVector = MyVector;
-
-	LocalVector.Z = LocalVector.Z + 100;
-
-	MyVector.Y = MyVector.Y + 1;
-
-	SetActorLocation(LocalVector);
-
-	// Move platform forvard
-		// Get current location
-		// Add vector to the location
-		// Set the location
-	// Send platform back if gone too far
-		// Check how far we've moved
-		// Reverse direction of motion if gone too far
 
 }
 
